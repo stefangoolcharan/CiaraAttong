@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5vh 2%;
+    background-color: #CF8B7D;
+}
+
+header h2 {
+    font-family: 'Island Moments', cursive;
+    cursor: pointer;
+    color: #e7e7e7;
+    padding-right: 26.5vw;
+    font-size: 8vh;
+    font-weight: 500;
+}
+
+#nav-items li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#nav-items li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    font-size: 1.8vh;
+    color: #f5f5f5;
+}
+
+#nav-items li a:hover {
+    color: #1a1817;
+}
+
+#nav-items img {
+    padding: 0;
+    position: relative;
+    margin: 0;
+    height: 2.5vh;
+    top: 0.4vh;
+    cursor: pointer;
+}
+
+.main div {
+    color: #f5f5f5;
+    transform: scale(200%);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    display: none;
+}
+
+#section-1 {
+    height: 85vh;
+    background: #CF8B7D;
+}
+
+#quotes {
+    position: relative;
+    left: 55vw;
+    top: 14vh;
+}
+
+.heading {
+    font-family: 'Island Moments', cursive;
+    font-size: clamp(50px, 4vw, 100px);
+    color: white;
+    font-weight: 500;
+    padding-bottom: 2vh;
+}
+
+#quotes p {
+    color: white;
+    font-size: clamp(25px, 1vw, 30px);
+    padding-bottom: 6vh;
+    font-weight: 300;
+    line-height: 4.5vh;
+}
+
+#quotes img {
+    position: relative;
+    border-radius: 40vh;
+    width: auto;
+    transform: scale(45%);
+    right: 45vw;
+    bottom: 95vh;
+}
+
+.spacer {
+    aspect-ratio: 960/400;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.layer1 {
+    background-image: url('media/layered-waves-haikei.svg');
+}
+
+#bio {
+    background-color: #dfe4e8;
+    height: 80vh;
+    position: relative;
+    top: 16.5vh;
+}
+
+.section-2 {
+    position: relative;
+    top: 5vh;
+    left: 15vw;
+}
+
+#bio h1 {
+    font-weight: 400;
+    padding-top: 4vh;
+    font-size: 4vh;
+    padding-bottom: 4vh;
+}
+
+#bio p {
+    font-size: clamp(px, 1.8vh, 20px);
+    line-height: 3.5vh;
+}
+
+#bio img {
+    position: relative;
+    height: 40vh;
+    width: 22vw;
+    border-radius: 1vh;
+    bottom: 50vh;
+    left: 54vw;
+}
+
+/*Mobile landscape responsivness*/
+
+@media (min-width: 320px) and (max-width: 750px) {
+
+    html{ 
+        overflow-x: hidden;
+    }
+
+    #home-page h2{ 
+        font-size: 5vh;
+        padding-right: 1vw;
+        position: relative;
+        left: 18vw;
+    }
+
+    #nav-items li {
+        display: none;
+    }
+
+    .main div {
+        display: inline-block;
+        position: relative;
+        right: 5vw;
+    }
+
+    .spacer {
+        aspect-ratio: 540/960;
+    }
+
+    #section-1 {
+        background-color: #CF8B7D;
+        height: 90vh;
+    }
+
+    #quotes {
+        left: 1px;
+        top: 40vh;
+        text-align: center;
+    }
+
+    #quotes p {
+        font-size: 2vh;
+        line-height: 2;
+        padding-bottom: 3vh;
+        text-align: center;
+    }
+
+    #quotes img {
+        transform: scale(20%);
+        right: 73vw;
+        bottom: 145vh;
+    }
+}
