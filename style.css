@@ -6,12 +6,13 @@
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 
 header {
     display: flex;
@@ -41,6 +42,7 @@ header h2 {
     text-decoration: none;
     font-size: 1.8vh;
     color: #f5f5f5;
+    transition: all .50s ease;
 }
 
 #nav-items li a:hover {
@@ -56,6 +58,69 @@ header h2 {
     cursor: pointer;
 }
 
+@media (max-width: 1280px) {
+    header {
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1090px) {
+
+    header h2 {
+        font-size: 7vh;
+        text-align: center;
+        position: relative;
+        left: 19vw;
+    }
+
+    #menu-icon {
+        display: inline-block;
+    }
+
+    #nav-items {
+        position: absolute;
+        top: 9%;
+        right: -100%;
+        width: 300px;
+        height: 45vh;
+        background-color: #e7e7e7;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: none;
+        transition: all .50s ease;
+    }
+
+    #nav-items li a {
+        color: #1a1817;
+        font-size: 20px;
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        display: flex;
+        transition: all .50s ease;
+    }
+
+    #nav-items a:hover {
+        color: #CF8B7D;
+        transform: translateX(10px);
+    }
+
+    #nav-items.open {
+        right: 0%;
+        display: flex;
+    }
+
+}
+
+/*Section One Styling*/
+
+#section-1 {
+    height: 85vh;
+    background: #CF8B7D;
+}
+
 .main div {
     color: #f5f5f5;
     transform: scale(200%);
@@ -63,42 +128,6 @@ header h2 {
     position: relative;
     top: 2px;
     display: none;
-}
-
-#section-1 {
-    height: 85vh;
-    background: #CF8B7D;
-}
-
-#quotes {
-    position: relative;
-    left: 55vw;
-    top: 14vh;
-}
-
-.heading {
-    font-family: 'Island Moments', cursive;
-    font-size: clamp(50px, 4vw, 100px);
-    color: white;
-    font-weight: 500;
-    padding-bottom: 2vh;
-}
-
-#quotes p {
-    color: white;
-    font-size: clamp(25px, 1vw, 30px);
-    padding-bottom: 6vh;
-    font-weight: 300;
-    line-height: 4.5vh;
-}
-
-#quotes img {
-    position: relative;
-    border-radius: 40vh;
-    width: auto;
-    transform: scale(45%);
-    right: 45vw;
-    bottom: 95vh;
 }
 
 .spacer {
@@ -115,90 +144,9 @@ header h2 {
     background-image: url('media/layered-waves-haikei.svg');
 }
 
-#bio {
-    background-color: #dfe4e8;
-    height: 80vh;
-    position: relative;
-    top: 16.5vh;
-}
 
-.section-2 {
-    position: relative;
-    top: 5vh;
-    left: 15vw;
-}
-
-#bio h1 {
-    font-weight: 400;
-    padding-top: 4vh;
-    font-size: 4vh;
-    padding-bottom: 4vh;
-}
-
-#bio p {
-    font-size: clamp(px, 1.8vh, 20px);
-    line-height: 3.5vh;
-}
-
-#bio img {
-    position: relative;
-    height: 40vh;
-    width: 22vw;
-    border-radius: 1vh;
-    bottom: 50vh;
-    left: 54vw;
-}
-
-/*Mobile landscape responsivness*/
-
-@media (min-width: 320px) and (max-width: 750px) {
-
-    html{ 
-        overflow-x: hidden;
-    }
-
-    #home-page h2{ 
-        font-size: 5vh;
-        padding-right: 1vw;
-        position: relative;
-        left: 18vw;
-    }
-
-    #nav-items li {
-        display: none;
-    }
-
-    .main div {
-        display: inline-block;
-        position: relative;
-        right: 5vw;
-    }
-
+@media (max-width: 1080px) {
     .spacer {
-        aspect-ratio: 540/960;
-    }
-
-    #section-1 {
-        background-color: #CF8B7D;
-        height: 90vh;
-    }
-
-    #quotes {
-        left: 1px;
-        top: 40vh;
-        text-align: center;
-    }
-
-    #quotes p {
-        font-size: 2vh;
-        line-height: 2;
-        padding-bottom: 3vh;
-        text-align: center;
-    }
-
-    #quotes img {
-        transform: scale(20%);
-        right: 73vw;
-        bottom: 145vh;
+        aspect-ratio: 240/690;
     }
 }
