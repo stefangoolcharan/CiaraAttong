@@ -6,7 +6,6 @@
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 html {
@@ -27,7 +26,7 @@ header h2 {
     cursor: pointer;
     color: #e7e7e7;
     padding-right: 26.5vw;
-    font-size: 8vh;
+    font-size: 7vh;
     font-weight: 500;
 }
 
@@ -70,11 +69,13 @@ header h2 {
         font-size: 7vh;
         text-align: center;
         position: relative;
-        left: 19vw;
+        left: 45px;
     }
 
     #menu-icon {
         display: inline-block;
+        position: relative;
+        right: 20px;
     }
 
     #nav-items {
@@ -148,5 +149,68 @@ header h2 {
 @media (max-width: 1080px) {
     .spacer {
         aspect-ratio: 240/690;
+    }
+}
+
+#quotes {
+    position: relative;
+    top: 14vh;
+    
+}
+
+.heading {
+    position: relative;
+    left: 1040px;
+    font-family: 'Island Moments', cursive;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 2vh;
+}
+
+#quotes p {
+    color: white;
+    font-size: clamp(22px, 1vw, 30px);
+    padding-bottom: 6vh;
+    font-weight: 300;
+    line-height: 4.5vh;
+}
+
+#quotes img {
+    position: relative;
+    border-radius: 40vh;
+    width: auto;
+    transform: scale(45%);
+    right: 45vw;
+    bottom: 95vh;
+}
+
+@media (max-width: 1080px){ 
+
+    .heading{ 
+        position: relative;
+        left: 60px;
+        font-size: 45px;
+        max-width: 300px;
+    }
+
+    #quotes{ 
+        top: 10vh;
+    }
+
+    #quotes img{ 
+        transform: scale(20%);
+        right: 128vw;
+        bottom: 80vh;
+    }
+
+    #quotes p{ 
+        text-align: center;
+        max-width: 300px;
+        font-size: 15px;
+        padding-bottom: 10px;
+        position: relative;
+        right: 45vw;
+        top: 4vh;
     }
 }
