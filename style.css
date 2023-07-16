@@ -65,6 +65,10 @@ header h2 {
 
 @media (max-width: 1090px) {
 
+    header{ 
+        background-color: #c6236725;
+    }
+
     header h2 {
         font-size: 7vh;
         text-align: center;
@@ -210,7 +214,56 @@ header h2 {
         font-size: 15px;
         padding-bottom: 10px;
         position: relative;
-        right: 45vw;
+        left: 8vw;
         top: 4vh;
+    }
+}
+
+
+@media (max-width: 1080px){ 
+
+    #poster img{ 
+        position: relative;
+        top: 30vh;
+        left: 6vw;
+        transform: scale(55%);
+    }
+
+    #description{ 
+        text-align: center;
+        position: relative;
+        top: 20vh;
+    }
+    
+    #description h2{ 
+        font-weight: 500;
+        padding-bottom: 3vh;
+    }
+
+    #description p{ 
+        font-size: 15px;
+        padding-bottom: 3vh;
+    }
+
+    .amazon-border{ 
+        transform: scale(110%);
+        border-radius: 5px;
+        width: 104px;
+        display: flex; 
+        align-items: center;
+        position: relative;
+        left: 125px;
+        padding: 5px;
+        background-color: #FF9900;
+    }
+
+    .amazon-btn{ 
+        text-decoration: none;
+        color: black;
+        padding-left: 10px;
+        border-style: none;
+        font-weight: 500;
+        font-size: 18px;
+        background-color: #FF9900;
     }
 }
