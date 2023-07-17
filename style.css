@@ -225,8 +225,11 @@ header h2 {
     #poster img{ 
         position: relative;
         top: 30vh;
-        left: 6vw;
-        transform: scale(55%);
+        transform: scale(60%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
 
     #description{ 
