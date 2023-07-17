@@ -65,7 +65,7 @@ header h2 {
 
 @media (max-width: 1090px) {
 
-    header{ 
+    header {
         background-color: #c6236725;
     }
 
@@ -159,17 +159,14 @@ header h2 {
 #quotes {
     position: relative;
     top: 14vh;
-    
+
 }
 
-.heading {
-    position: relative;
-    left: 1040px;
+.title {
     font-family: 'Island Moments', cursive;
-    color: white;
-    font-size: 50px;
+    ;
     font-weight: 500;
-    padding-bottom: 2vh;
+    padding-bottom: 3vh;
 }
 
 #quotes p {
@@ -189,26 +186,28 @@ header h2 {
     bottom: 95vh;
 }
 
-@media (max-width: 1080px){ 
+@media (max-width: 1080px) {
 
-    .heading{ 
-        position: relative;
-        left: 60px;
-        font-size: 45px;
-        max-width: 300px;
+    .title {
+        font-weight: 500;
+        text-align: center;
+        font-family: 'Island Moments', cursive;
+        color: white;
+        font-size: 35px;
+        padding-bottom: 3vh;
     }
 
-    #quotes{ 
+    #quotes {
         top: 10vh;
     }
 
-    #quotes img{ 
+    #quotes img {
         transform: scale(20%);
         right: 128vw;
         bottom: 80vh;
     }
 
-    #quotes p{ 
+    #quotes p {
         text-align: center;
         max-width: 300px;
         font-size: 15px;
@@ -219,10 +218,11 @@ header h2 {
     }
 }
 
+/*Latest Release Banner*/
 
-@media (max-width: 1080px){ 
+@media (max-width: 1080px) {
 
-    #poster img{ 
+    #poster img {
         position: relative;
         top: 30vh;
         transform: scale(60%);
@@ -232,27 +232,36 @@ header h2 {
         width: 80%;
     }
 
-    #description{ 
+    #poster h1 {
+        position: relative;
+        top: 42vh;
+        text-decoration-line: underline;
+        text-decoration-color: #C62368;
+        font-size: x-large;
+        text-align: center;
+    }
+
+    #description {
         text-align: center;
         position: relative;
         top: 20vh;
     }
-    
-    #description h2{ 
+
+    .heading {
         font-weight: 500;
         padding-bottom: 3vh;
     }
 
-    #description p{ 
+    #description p {
         font-size: 15px;
         padding-bottom: 3vh;
     }
 
-    .amazon-border{ 
+    .amazon-border {
         transform: scale(110%);
         border-radius: 5px;
         width: 100px;
-        display: flex; 
+        display: flex;
         align-items: center;
         padding: 5px;
         background-color: #FF9900;
@@ -262,7 +271,7 @@ header h2 {
         width: 50%;
     }
 
-    .amazon-btn{ 
+    .amazon-btn {
         text-decoration: none;
         color: black;
         padding-left: 10px;
@@ -271,4 +280,39 @@ header h2 {
         font-size: 18px;
         background-color: #FF9900;
     }
+}
+
+
+
+/*See More Books Section*/
+
+@media (max-width: 1080px) {
+    #see-more ul {
+        display: flex;
+        transform: scale(40%);
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+
+    #see-more li {
+        padding: 10px;
+        list-style: none;
+    }
+
+    #see-more h4 {
+        text-align: center;
+    }
+
+    #see-more h4 a {
+        position: relative;
+        bottom: 2vh;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        text-decoration-line: underline;
+        text-decoration-color: #C62368;
+        text-decoration-thickness: 2px;
+    }
+
 }
