@@ -13,6 +13,8 @@ html {
 }
 
 
+/*Navigation Bar*/
+
 header {
     display: flex;
     justify-content: space-around;
@@ -57,13 +59,16 @@ header h2 {
     cursor: pointer;
 }
 
-@media (max-width: 1280px) {
+
+/*Mobile (Portrait) Responsiveness*/
+
+@media (min-width: 320px) {
     header {
         transition: .2s;
     }
 }
 
-@media (max-width: 1090px) {
+@media (min-width: 320px) {
 
     header {
         background-color: #c6236725;
@@ -119,9 +124,9 @@ header h2 {
 
 }
 
-/*Section One Styling*/
+/*Front Section*/
 
-#section-1 {
+.section-1 {
     height: 85vh;
     background: #CF8B7D;
 }
@@ -149,82 +154,65 @@ header h2 {
     background-image: url('media/layered-waves-haikei.svg');
 }
 
-.layer2 {
-    background-image: url(media/footer-wave.svg);
-}
-
-
-@media (max-width: 1080px) {
-    .spacer {
-        aspect-ratio: 240/690;
-    }
-}
 
 #quotes {
     position: relative;
     top: 14vh;
-
 }
 
 .title {
     font-family: 'Island Moments', cursive;
-    ;
     font-weight: 500;
     padding-bottom: 3vh;
 }
 
-#quotes p {
-    color: white;
-    font-size: clamp(22px, 1vw, 30px);
-    padding-bottom: 6vh;
-    font-weight: 300;
-    line-height: 4.5vh;
-}
+/*Mobile (Portrait) Responsiveness*/
 
-#quotes img {
-    position: relative;
-    border-radius: 40vh;
-    width: auto;
-    transform: scale(45%);
-    right: 45vw;
-    bottom: 95vh;
-}
-
-@media (max-width: 1080px) {
+@media (min-width: 320px) {
 
     .title {
         font-weight: 500;
         text-align: center;
         font-family: 'Island Moments', cursive;
         color: white;
-        font-size: 35px;
-        padding-bottom: 3vh;
+        font-size: 45px;
+        padding-bottom: 2vh;
     }
 
     #quotes {
-        top: 10vh;
-    }
-
-    #quotes img {
-        transform: scale(20%);
-        right: 128vw;
-        bottom: 80vh;
+        top: 5vh;
     }
 
     #quotes p {
         text-align: center;
-        max-width: 300px;
-        font-size: 15px;
-        padding-bottom: 10px;
+        line-height: 35px;
+        color: #e7e7e7;
+        font-weight: 300;
+    }
+
+    .home-img {
         position: relative;
-        left: 8vw;
-        top: 4vh;
+        top: 0vh;
+        transform: scale(70%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 320px) {
+    .spacer {
+        aspect-ratio: 240/690;
     }
 }
 
 /*Latest Release Banner*/
 
-@media (max-width: 1080px) {
+/*Mobile (Portrait) Responsiveness*/
+
+@media (min-width: 320px) {
 
     #poster img {
         position: relative;
@@ -253,12 +241,12 @@ header h2 {
 
     .heading {
         font-weight: 500;
-        padding-bottom: 3vh;
+        padding-bottom: 1vh;
     }
 
     #description p {
         font-size: 15px;
-        padding-bottom: 3vh;
+        padding: 3vh;
     }
 
     .amazon-border {
@@ -286,11 +274,11 @@ header h2 {
     }
 }
 
-
-
 /*See More Books Section*/
 
-@media (max-width: 1080px) {
+/*Mobile (Portrait) Responsiveness*/
+
+@media (min-width: 320px) {
     #see-more ul {
         display: flex;
         transform: scale(40%);
@@ -318,10 +306,13 @@ header h2 {
         text-decoration-color: #C62368;
         text-decoration-thickness: 2px;
     }
-
 }
 
-@media (max-width: 1080px) {
+/*Footer Section*/
+
+/*Mobile (Portrait) Responsiveness*/
+
+@media (min-width: 320px) {
 
     #footer {
         height: 30vh;
@@ -364,5 +355,89 @@ header h2 {
         font-weight: 300;
         font-size: small;
         text-align: center;
+    }
+}
+
+/*The Writer's Lodge Page*/
+
+@media (min-width: 320px) {
+    .pov-header {
+        height: 50vh;
+        background-image: url(media/blob-svg.svg);
+    }
+
+    .pov-home {
+        background-color: #1a1817;
+    }
+
+    .pov-title {
+        text-align: center;
+        padding-top: 8vh;
+    }
+
+    .pov-title h2 {
+        font-weight: 400;
+        font-size: 32px;
+        padding-bottom: 4vh;
+    }
+
+    .pov-title h4 {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .pov-title h4 span {
+        color: #C62368;
+        text-transform: capitalize;
+    }
+
+    .pov-des {
+        height: 140vh;
+        text-align: center;
+      
+    }
+
+    .pov-des h2{ 
+        padding: 5vh;
+        font-weight: 500;
+    }
+
+    .pov-des img{ 
+        position: relative;
+        top: 0vh;
+        transform: scale(80%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .pov-des p{ 
+        padding: 3vh;
+    }
+
+    .discord-invite {
+        transform: scale(110%);
+        border-radius: 5px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        background-color: #7289da;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .discord-btn {
+        text-decoration: none;
+        color: white;
+        padding-left: 10px;
+        border-style: none;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: #7289da;
     }
 }
