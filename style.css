@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
 
 
 * {
@@ -23,13 +25,14 @@ header {
     background-color: #CF8B7D;
 }
 
-header h2 {
-    font-family: 'Island Moments', cursive;
+header h2 a {
+    font-family: 'Cormorant Garamond', serif;
     cursor: pointer;
     color: #e7e7e7;
     padding-right: 26.5vw;
     font-size: 7vh;
     font-weight: 500;
+    text-decoration: none;
 }
 
 #nav-items li {
@@ -71,14 +74,16 @@ header h2 {
 @media (min-width: 320px) {
 
     header {
-        background-color: #c6236725;
+        background-color: #c6236741;
+        padding: 15px;
     }
 
-    header h2 {
-        font-size: 7vh;
+    header h2 a{
+        font-size: 4vh;
         text-align: center;
         position: relative;
-        left: 45px;
+        left: 18vw;
+        text-transform: uppercase;
     }
 
     #menu-icon {
@@ -154,7 +159,6 @@ header h2 {
     background-image: url('media/layered-waves-haikei.svg');
 }
 
-
 #quotes {
     position: relative;
     top: 14vh;
@@ -221,7 +225,7 @@ header h2 {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 80%;
+        width: 80%; 
     }
 
     #poster h1 {
@@ -279,7 +283,7 @@ header h2 {
 /*Mobile (Portrait) Responsiveness*/
 
 @media (min-width: 320px) {
-    #see-more ul {
+    .see-more ul {
         display: flex;
         transform: scale(40%);
         justify-content: center;
@@ -287,16 +291,16 @@ header h2 {
         top: 10vh;
     }
 
-    #see-more li {
+    .see-more li {
         padding: 10px;
         list-style: none;
     }
 
-    #see-more h4 {
+    .see-more h4 {
         text-align: center;
     }
 
-    #see-more h4 a {
+    .see-more h4 a {
         position: relative;
         bottom: 2vh;
         text-decoration: none;
@@ -358,6 +362,57 @@ header h2 {
     }
 }
 
+
+/*Biographical Section*/
+
+@media (min-width: 320px){ 
+    .bio-section{ 
+        height: 60vh;
+        background-image: url('media/bio-wave.svg');
+        background-size: cover;
+    }
+
+    .bio-heading h2{ 
+        font-weight: 500;
+        font-size: 50px;
+        padding-top: 50px;
+        padding-bottom: 4vh;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        color: #e7e7e7;
+    }
+    
+    .author-bio h2 {
+        font-weight: 500;
+        font-size: 60px;
+        text-align: center;
+        padding-bottom: 4vh;
+        font-family: 'Island Moments', cursive;
+    }
+
+    .author-bio img{ 
+        transform: scale(90%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%; 
+    }
+
+    .author-bio p{ 
+        padding: 0vh 6vh 0vh;
+        line-height: 4vh;
+    }
+
+    .bio-more ul{ 
+        top: 0vh;
+    }
+
+    .bio-more h4 a{ 
+        bottom: 10vh;
+    }
+}
+
+
 /*The Writer's Lodge Page*/
 
 @media (min-width: 320px) {
@@ -376,9 +431,10 @@ header h2 {
     }
 
     .pov-title h2 {
-        font-weight: 400;
-        font-size: 32px;
+        font-weight: 500;
+        font-size: 40px;
         padding-bottom: 4vh;
+        font-family: 'Dancing Script', cursive;
     }
 
     .pov-title h4 {
@@ -394,7 +450,6 @@ header h2 {
     .pov-des {
         height: 140vh;
         text-align: center;
-      
     }
 
     .pov-des h2{ 
@@ -414,7 +469,7 @@ header h2 {
     }
 
     .pov-des p{ 
-        padding: 3vh;
+        padding: 4vh;
     }
 
     .discord-invite {
