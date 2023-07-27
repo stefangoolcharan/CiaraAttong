@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /*Navigation Bar*/
@@ -142,22 +143,23 @@ header h2 a {
     animation-duration: 2s;
     animation-timing-function: ease-in-out 1s;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes fadeInAnimation {
+}
+
+@keyframes fadeInAnimation {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
-      transform: scale(110%);
+        opacity: 1;
+        transform: scale(110%);
     }
-  }
+}
 
 .section-1 img {
-    
+
     position: relative;
-    bottom: 45vh;
+    bottom: 50vh;
     left: 8vw;
     margin-left: 0;
     margin-right: 0;
@@ -166,33 +168,35 @@ header h2 a {
     opacity: 0;
     position: relative;
     animation: fadeInFromLeftAnimation 1s ease-in-out forwards;
-  }
-  
-  @keyframes fadeInFromLeftAnimation {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-      transform: scale(60%);
-    }
-  }
-
-
-  /*Matter of Existence*/
-
-#poster{ 
-    position: relative;
-    top: 35vh;
 }
 
-.heading{ 
+@keyframes fadeInFromLeftAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        transform: scale(50%);
+    }
+}
+
+/*Matter of Existence*/
+
+#poster {
+    position: relative;
+    top: 35vh;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.heading {
     font-weight: 500;
 }
 
-#poster h1{ 
+#poster h1 {
     text-align: center;
     font-size: 35px;
     font-weight: 300;
@@ -201,41 +205,50 @@ header h2 a {
     text-decoration-color: #C62368;
 }
 
-#poster h2{ 
+#poster h2 {
     font-size: 40px;
     font-weight: 300;
     padding-bottom: 5vh;
 }
 
-#poster img{ 
+#poster img {
     position: relative;
-    padding-left: 20vw ;
+    padding-left: 20vw;
 }
 
-#description { 
+#poster img:hover{
+    cursor: pointer;
+}
+
+#description {
     position: relative;
     left: 50vw;
     bottom: 50vh;
 }
 
-#description p { 
+#description p {
     max-width: 800px;
     line-height: 4vh;
     font-size: 2vh;
 }
 
-#poster ul { 
+#poster ul {
     padding-top: 4vh;
     text-align: center;
 }
 
-.amazon-border { 
+.amazon-border {
     border-radius: 5px;
     width: 50px;
     padding: 5px;
     background-color: #FF9900;
     display: block;
     width: 10%;
+}
+
+.amazon-border:hover{ 
+    transform: scale(110%);
+    transition: 0.1s ease-in-out;
 }
 
 .amazon-btn {
@@ -246,6 +259,88 @@ header h2 a {
     font-weight: 500;
     font-size: 18px;
     background-color: #FF9900;
+}
+
+.see-more{
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.see-more ul {
+    display: flex;
+    transform: scale(60%);
+    justify-content: left;
+    position: relative;
+    bottom: 20vh;
+}
+
+.see-more ul li {    
+   display: inline-block;
+   padding: 10px;
+   
+}
+
+.see-more ul li:hover{ 
+    transform: scale(105%);
+    transition: 0.2s ease-in-out;
+}
+
+.see-more h4 a{ 
+    text-decoration-color: #c62367;
+    color: #1a1817;
+    font-size: 20px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 25vh;
+
+}
+
+#footer {
+    height: 20vh;
+    background-color: #1a1817;
+    text-align: center;
+}
+
+#footer h4 {
+    text-align: center;
+    font-family:'Cormorant Garamond', serif;
+    font-size: 3vh;
+    text-transform: uppercase;
+    padding-top: 2vh;
+    color: #e7e7e7;
+    font-weight: 400;
+}
+
+#footer-items li {
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+}
+
+#footer-items li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#footer-socials {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-socials li {
+    list-style: none;
+    padding: 10px;
+}
+
+#footer p {
+    color: #e7e7e7;
+    font-weight: 300;
+    font-size: small;
+    text-align: center;
 }
 
 
@@ -378,7 +473,7 @@ header h2 a {
 
     /*LATEST RELEASE BANNER*/
 
-    #poster{ 
+    #poster {
         position: relative;
         top: 0vh;
     }
@@ -404,7 +499,7 @@ header h2 a {
         text-align: center;
     }
 
-    #poster h2 { 
+    #poster h2 {
         font-size: 3.5vh;
         padding-bottom: 0;
         font-weight: 400;
@@ -482,61 +577,15 @@ header h2 a {
         text-decoration-thickness: 2px;
     }
 
-}
-
-/*Footer Section*/
-
-/*Mobile (Portrait) Responsiveness*/
-
-@media (min-width: 320px) and (max-width: 425px) {
+    /*FOOTER SECTION*/
 
     #footer {
         height: 30vh;
-        background-color: #1a1817;
-        text-align: center;
     }
 
-    #footer h4 {
-        text-align: center;
-        padding-top: 2vh;
-        color: #e7e7e7;
-        font-weight: 400;
-    }
+    /*Biographical Section*/
 
-    #footer-items li {
-        display: inline-block;
-        text-align: left;
-        padding: 10px;
-    }
 
-    #footer-items li a {
-        text-decoration: none;
-        color: #f5f5f5;
-        font-weight: 200;
-        font-size: 15px;
-    }
-
-    #footer-socials {
-        display: flex;
-        justify-content: center;
-    }
-
-    #footer-socials li {
-        list-style: none;
-        padding: 10px;
-    }
-
-    #footer p {
-        color: #e7e7e7;
-        font-weight: 300;
-        font-size: small;
-        text-align: center;
-    }
-}
-
-/*Biographical Section*/
-
-@media (min-width: 320px) {
     .bio-section {
         height: 60vh;
         background-image: url('media/bio-wave.svg');
@@ -584,11 +633,11 @@ header h2 a {
     .bio-more h4 a {
         bottom: 10vh;
     }
-}
 
-/*Books Section*/
 
-@media (min-width: 320px) {
+    /*Books Section*/
+
+
 
     .book-list ul li img {
         transform: scale(70%);
@@ -619,11 +668,10 @@ header h2 a {
         padding: 20px 0px;
     }
 
-}
 
-/*The Writer's Lodge Page*/
 
-@media (min-width: 320px) {
+    /*The Writer's Lodge Page*/
+
     .pov-header {
         height: 50vh;
         background-image: url(media/blob-svg.svg);
@@ -706,4 +754,5 @@ header h2 a {
         font-size: 16px;
         background-color: #7289da;
     }
+
 }
