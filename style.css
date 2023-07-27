@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
 
-
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -14,15 +13,14 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /*Navigation Bar*/
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5vh 2%;
-    background-color: #CF8B7D;
+    padding: 1vh 5%;
+    background-color: #1a1817;
 }
 
 header h2 a {
@@ -30,9 +28,10 @@ header h2 a {
     cursor: pointer;
     color: #e7e7e7;
     padding-right: 26.5vw;
-    font-size: 7vh;
+    font-size: 5vh;
     font-weight: 500;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 #nav-items li {
@@ -50,7 +49,8 @@ header h2 a {
 }
 
 #nav-items li a:hover {
-    color: #1a1817;
+    color: #CF8B7D;
+    transition: 0.5 s ease-in;
 }
 
 #nav-items img {
@@ -62,23 +62,145 @@ header h2 a {
     cursor: pointer;
 }
 
+/*Front Section*/
 
-/*Mobile (Portrait) Responsiveness*/
+.section-1 {
+    height: 80vh;
+    background: #cf8b7dd7;
+}
 
-@media (min-width: 320px) {
-    header {
-        transition: .2s;
+.main div {
+    color: #f5f5f5;
+    transform: scale(200%);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    display: none;
+}
+
+.spacer {
+    aspect-ratio: 960/500;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.layer1 {
+    background-image: url('media/layered-waves-haikei.svg');
+}
+
+#quotes {
+    position: relative;
+    top: 16vh;
+    left: 20vw;
+    text-align: center;
+}
+
+.title {
+    display: inline-block;
+    font-family: 'Island Moments', cursive;
+    font-weight: 500;
+    padding-bottom: 3vh;
+    color: #f5f5f5;
+    font-size: 7vh;
+
+    letter-spacing: 10px;
+    border-right: 3px solid;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(13),
+        cursor 0.4s step-end infinite alternate;
+}
+
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
     }
 }
 
-@media (min-width: 320px) {
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+#quotes p {
+    color: #f5f5f5;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 5vh;
+    padding-bottom: 4vh;
+
+    opacity: 0;
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: scale(110%);
+    }
+  }
+
+.section-1 img {
+    
+    position: relative;
+    bottom: 45vh;
+    left: 8vw;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 5%;
+
+    opacity: 0;
+    position: relative;
+    animation: fadeInFromLeftAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInFromLeftAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      transform: scale(60%);
+    }
+  }
+
+
+/*Matter of Existence*/
+
+
+
+
+
+
+/*Mobile (Portrait) Responsiveness*/
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+    /*Navigation*/
 
     header {
-        background-color: #c6236741;
+        background-color: #1a1817;
         padding: 15px;
+        transition: .2s;
     }
 
-    header h2 a{
+    header h2 a {
         font-size: 4vh;
         text-align: center;
         position: relative;
@@ -127,64 +249,47 @@ header h2 a {
         display: flex;
     }
 
-}
+    /*Home Section*/
 
-/*Front Section*/
-
-.section-1 {
-    height: 85vh;
-    background: #CF8B7D;
-}
-
-.main div {
-    color: #f5f5f5;
-    transform: scale(200%);
-    cursor: pointer;
-    position: relative;
-    top: 2px;
-    display: none;
-}
-
-.spacer {
-    aspect-ratio: 960/400;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    z-index: 1;
-}
-
-.layer1 {
-    background-image: url('media/layered-waves-haikei.svg');
-}
-
-#quotes {
-    position: relative;
-    top: 14vh;
-}
-
-.title {
-    font-family: 'Island Moments', cursive;
-    font-weight: 500;
-    padding-bottom: 3vh;
-}
-
-/*Mobile (Portrait) Responsiveness*/
-
-@media (min-width: 320px) {
+    .section-1 {
+        height: 100vh;
+    }
 
     .title {
-        font-weight: 500;
-        text-align: center;
+        display: inline-block;
         font-family: 'Island Moments', cursive;
-        color: white;
-        font-size: 45px;
-        padding-bottom: 2vh;
+        font-weight: 500;
+        padding-bottom: 3vh;
+        color: #f5f5f5;
+        font-size: 6vh;
+
+        letter-spacing: 8px;
+        border-right: 3px solid;
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation:
+            typing 2s steps(13),
+            cursor 0.4s step-end infinite alternate;
+    }
+
+    @keyframes cursor {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
     }
 
     #quotes {
+        position: relative;
+        left: 2px;
         top: 5vh;
+        text-align: center;
     }
 
     #quotes p {
@@ -192,31 +297,25 @@ header h2 a {
         line-height: 35px;
         color: #e7e7e7;
         font-weight: 300;
+        font-size: 16px;
+
     }
+
 
     .home-img {
         position: relative;
         top: 0vh;
-        transform: scale(70%);
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
+        width: 89%;
         border-radius: 10px;
     }
-}
 
-@media (min-width: 320px) {
     .spacer {
-        aspect-ratio: 240/690;
+        aspect-ratio: 340/900;
     }
-}
 
-/*Latest Release Banner*/
-
-/*Mobile (Portrait) Responsiveness*/
-
-@media (min-width: 320px) {
+    /*LATEST RELEASE BANNER*/
 
     #poster img {
         position: relative;
@@ -225,7 +324,7 @@ header h2 a {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 80%; 
+        width: 80%;
     }
 
     #poster h1 {
@@ -250,7 +349,7 @@ header h2 a {
 
     #description p {
         font-size: 15px;
-        padding: 3vh;
+        padding: 4vh;
     }
 
     .amazon-border {
@@ -276,13 +375,9 @@ header h2 a {
         font-size: 18px;
         background-color: #FF9900;
     }
-}
 
-/*See More Books Section*/
+    /*SEE MORE BOOKS SECTION*/
 
-/*Mobile (Portrait) Responsiveness*/
-
-@media (min-width: 320px) {
     .see-more ul {
         display: flex;
         transform: scale(40%);
@@ -310,13 +405,14 @@ header h2 a {
         text-decoration-color: #C62368;
         text-decoration-thickness: 2px;
     }
+
 }
 
 /*Footer Section*/
 
 /*Mobile (Portrait) Responsiveness*/
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 425px) {
 
     #footer {
         height: 30vh;
@@ -362,17 +458,16 @@ header h2 a {
     }
 }
 
-
 /*Biographical Section*/
 
-@media (min-width: 320px){ 
-    .bio-section{ 
+@media (min-width: 320px) {
+    .bio-section {
         height: 60vh;
         background-image: url('media/bio-wave.svg');
         background-size: cover;
     }
 
-    .bio-heading h2{ 
+    .bio-heading h2 {
         font-weight: 500;
         font-size: 50px;
         padding-top: 50px;
@@ -381,37 +476,74 @@ header h2 a {
         text-align: center;
         color: #e7e7e7;
     }
-    
+
     .author-bio h2 {
         font-weight: 500;
         font-size: 60px;
         text-align: center;
         padding-bottom: 4vh;
+        color: #c62367;
         font-family: 'Island Moments', cursive;
     }
 
-    .author-bio img{ 
+    .author-bio img {
         transform: scale(90%);
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 80%; 
+        width: 80%;
+        border: 2px solid #1a1817;
+        border-radius: 10px;
     }
 
-    .author-bio p{ 
+    .author-bio p {
         padding: 0vh 6vh 0vh;
         line-height: 4vh;
     }
 
-    .bio-more ul{ 
+    .bio-more ul {
         top: 0vh;
     }
 
-    .bio-more h4 a{ 
+    .bio-more h4 a {
         bottom: 10vh;
     }
 }
 
+/*Books Section*/
+
+@media (min-width: 320px) {
+
+    .book-list ul li img {
+        transform: scale(70%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .book-list ul li {
+        text-align: center;
+    }
+
+    .book-list a {
+        text-decoration: underline;
+        text-decoration-color: #c62367;
+        color: #1a1817;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .books h4 {
+        text-align: center;
+        min-width: 300px;
+        font-size: 20px;
+        font-weight: 450;
+        padding: 20px 0px;
+    }
+
+}
 
 /*The Writer's Lodge Page*/
 
@@ -448,16 +580,15 @@ header h2 a {
     }
 
     .pov-des {
-        height: 140vh;
         text-align: center;
     }
 
-    .pov-des h2{ 
+    .pov-des h2 {
         padding: 5vh;
         font-weight: 500;
     }
 
-    .pov-des img{ 
+    .pov-des img {
         position: relative;
         top: 0vh;
         transform: scale(80%);
@@ -468,8 +599,12 @@ header h2 a {
         border-radius: 10px;
     }
 
-    .pov-des p{ 
+    .pov-des p {
         padding: 4vh;
+    }
+
+    .pov-des ul {
+        padding-bottom: 40px;
     }
 
     .discord-invite {
